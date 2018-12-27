@@ -15,9 +15,10 @@ public class SetupClass {
 
 	public static void initProperties() {
 		prop = new Properties();
+		String filePath= "src/test/resources/configuration/credential.properties";
 		FileInputStream fios;
 		try {
-			fios = new FileInputStream("src/test/resources/configuration/credential.properties");
+			fios = new FileInputStream(filePath);
 			prop.load(fios);
 		} catch (IOException e) {
 
