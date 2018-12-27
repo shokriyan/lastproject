@@ -14,7 +14,7 @@ public class Hooks {
 	}
 	
 	@After
-	public void close() {
+	public void closingBrowser() {
 		setup.tearDown();
 		
 	}
