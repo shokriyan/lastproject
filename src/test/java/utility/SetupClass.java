@@ -15,7 +15,7 @@ public class SetupClass {
 
 	public static void initProperties() {
 		prop = new Properties();
-		String filePath= "src/test/resources/configuration/credential.properties";
+		final String filePath= "src/test/resources/configuration/credential.properties";
 		FileInputStream fios;
 		try {
 			fios = new FileInputStream(filePath);
@@ -32,7 +32,9 @@ public class SetupClass {
 	public static void setUp() {
 		initProperties();
 		String browserName = prop.getProperty("browser");
-		String osName = System.getProperty("os.name");
+		
+		final String osName = System.getProperty("os.name");
+		
 		if (browserName.equalsIgnoreCase("chrome")) {
 			if (osName.contains("Mac")) {
 				System.setProperty("webdriver.chrome.driver", "src/test/resources/drivers/chromedriver");
