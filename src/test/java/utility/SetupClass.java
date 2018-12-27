@@ -15,9 +15,9 @@ public class SetupClass {
 
 	public static void initProperties() {
 		prop = new Properties();
-		FileInputStream fios;
+		
 		try {
-			fios = new FileInputStream("src/test/resources/configuration/credential.properties");
+			FileInputStream fios = new FileInputStream("src/test/resources/configuration/credential.properties");
 			prop.load(fios);
 		} catch (IOException e) {
 
