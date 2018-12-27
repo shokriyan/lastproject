@@ -15,7 +15,7 @@ public class utilityClass extends SetupClass {
 	}
 
 	public static WebElement waiting(WebElement element) {
-		WebDriverWait wait = new WebDriverWait(driver, 20);
+		WebDriverWait wait = new WebDriverWait(driver, 10);
 		return wait.until(ExpectedConditions.elementToBeClickable(element));
 
 	}
